@@ -1,0 +1,20 @@
+<div id="prompt" ng-hide="smokeToday">
+    <h3>Have you smoked today?</h3>
+    <div id="yes" ng-click="yes()">Yes</div>
+
+    <div id="no" ng-click="no()">No</div>
+</div>
+<div id="main-section">
+    <div class="symptoms" ng-show="smokeToday">
+
+        <i-quit-directive ng-show="ifYes"></i-quit-directive>
+
+        <p>Todays symptoms are {{symptoms}}</p>
+
+        <p>Todays Benifits are {{benifits}}</p>
+
+    </div>
+    <p>What are your reasons to quit?</p><input type="text" ng-model="reasons">
+    <p>Upload a photo here!</p><input type="text" ng-model="reasonImg">
+    <button ng-click="submit(reasons,reasonImg)">Submit</button>
+</div>
