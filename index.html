@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Iquit</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
 
-
-
 </head>
-<body ng-controller="iQuitCtrl">
-    <nav>
-        <span ui-sref="home">Home</span>
-        <span ui-sref="progress" class="progress-nav">Progress</span>
-        <span ui-sref="about">About</span>
+<body ng-controller="iQuitCtrl" class="Site">
+    <nav class="row">
+        <span ui-sref="home" class="col text-center">Home</span>
+        <span ui-sref="progress" class="col text-center">Progress</span>
+        <span ui-sref="about" class="col text-center">About</span>
     </nav>
+    <h3>{{currentTime}}</h3>
 
-<ui-view>
+<ui-view class="Site-content">
 
 </ui-view>
-<footer></footer>
-    <script src="../../JS-Librarys/angular.js"></script>
+
+<footer class="row"><a class="col" href="https://www.cdc.gov/tobacco/campaign/tips/quit-smoking/?gclid=CjwKEAjwkq7GBRDun9iu2JjyhmsSJADHCD_HYiq5yBN2lDyX079VhloORuStC_8XPrNN-cpdstSZUhoCnj7w_wcB">Learn more at CDC.gov</a> <a class="col" href="tel:+1-800-784-8669">Call 1-800-784-8669 for help quitting</a></footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.0.min.js" integrity="sha256-JAW99MJVpJBGcbzEuXk4Az05s/XyDdBomFqNlM3ic+I=" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
-    <script src="../../JS-Librarys/jquery-3.1.1.js"></script>
-<script src="scripts.js"></script>
-    <script src="iQuitCtrl.js"></script>
-    <script src="iQuitDirective.js"></script>
+    <script src="librarys/moment.js"></script>
+    <script src="dist/js/bundle.js"></script>
 </body>
 </html>

@@ -3,6 +3,6 @@
  */
 angular.module("iQuit").directive("iQuitDirective",function () {
     return{
-        template:"<h1>It's okay the important thing is you're trying!</h1>"
+        template:"<h1 style='text-align: center'>It's okay the important thing is you're trying!</h1>"
     }
 });

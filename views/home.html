@@ -4,17 +4,26 @@
 
     <div id="no" ng-click="no()">No</div>
 </div>
-<div id="main-section">
-    <div class="symptoms" ng-show="smokeToday">
+
+<div id="main-section" class="row">
+    <div class="col container" ng-show="smokeToday" >
 
         <i-quit-directive ng-show="ifYes"></i-quit-directive>
+        <h4 class="text-center">Todays symptoms are</h4>
+        <ul style="list-style-type: none" class="col text-center" ng-repeat="s in symptoms[howManyDaysStored][0]"> <li>{{s}}</li></ul>
 
-        <p>Todays symptoms are {{symptoms}}</p>
-
-        <p>Todays Benifits are {{benifits}}</p>
 
     </div>
-    <p>What are your reasons to quit?</p><input type="text" ng-model="reasons">
+    <div  ng-show="smokeToday" class="col container">
+    <p>What are your reasons to quit?</p>
+        <input class="input-field" type="text" ng-model="reasons">
+    <button class="btn" ng-click="submit(reasons)">Submit</button>
     <p>Upload a photo here!</p><input type="text" ng-model="reasonImg">
-    <button ng-click="submit(reasons,reasonImg)">Submit</button>
+    <button  class="btn" ng-click="photo(reasonImg)">Submit Photo Url</button>
+    </div>
+</div>
+<div class="row">
+    <div class="col-5 container" style="margin-top: 3vh">
+        <h4>{{quote.quote}}</h4><cite>- {{quote.author}}</cite>
+    </div>
 </div>

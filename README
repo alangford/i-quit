@@ -1,0 +1,10 @@
+This app is to help you quit smoking!
+the layout is custom made with bootstrap
+it will store your days, reasons to quit and images to local storage
+i used angular for most of the data
+most of the JS is built in ES6 but gulp translated it for me
+i used timeAgo for the local time and date
+i used ui-router for the three different views
+and I used an api service to call for a random inspiring quote
+i also built a custom directive that displays a motivational message if you choosed yes at the begining
+thank you
