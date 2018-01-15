@@ -2,10 +2,10 @@
   "name": "i-quit",
   "version": "1.0.0",
   "description": "",
-  "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
+  "main": "gulpfile.js",
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -19,6 +19,8 @@
     "gulp-print": "^2.0.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
-    "gulp-uglify": "^2.1.0"
+    "gulp-uglify": "^2.1.0",
+    "jest": "^22.0.6",
+    "jest-cli": "^22.0.6"
   }
 }
