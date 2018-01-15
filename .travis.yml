@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - "8"
+install: true
+before_install:
+- sudo apt-get install -y python-pip
+- sudo pip install awscli
+
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: $S3_BUCKET
+  skip_cleanup: true
+  region: us-west-2
